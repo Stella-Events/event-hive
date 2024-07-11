@@ -1,4 +1,3 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import College from "./Pages/college";
 import CreateEvents from "./Pages/createEvents";
 import EventPage from "./Pages/eventPage";
@@ -7,17 +6,18 @@ import SignIn from "./Pages/signIn";
 import NotFound from "./Pages/notFound";
 import LandingPage from "./Pages/landingPage";
 import RootLayout from "./layouts/rootLayout";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
 
-const router = createBrowserRouter([
+const router = createBrowserRouter ([
   {
     path: "/",
     element: <RootLayout/>,
     children: [
       { index: true, element: <LandingPage /> },
       { path: "/eventpage", element: <EventPage /> },
-      { path: "/college", element: <College /> },
+      { path: "/college", element: <College/> },
      
       { path: "/notfound", element: <NotFound /> },
     ]
@@ -37,7 +37,7 @@ function App() {
 
   return (
     <>
-      <RouterProvider router={router} />
+    <RouterProvider router={router}/>
     </>
   )
 }
